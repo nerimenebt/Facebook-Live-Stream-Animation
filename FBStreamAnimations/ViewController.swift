@@ -35,9 +35,9 @@ class ViewController: UIViewController {
         let animation = CAKeyframeAnimation(keyPath: "position")
         animation.path = customPath().cgPath
         animation.duration = 2 + drand48() * 3
-        animation.fillMode = kCAFillModeForwards
+        animation.fillMode = CAMediaTimingFillMode.forwards
         animation.isRemovedOnCompletion = false
-        animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseOut)
+        animation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeOut)
         imageView.layer.add(animation, forKey: nil)
         view.addSubview(imageView)
     }
